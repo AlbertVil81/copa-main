@@ -1,0 +1,107 @@
+/* LOGIN */
+body{
+    background-color: #F3F4F6;
+}
+
+.btn{
+    background-color: #F40000;
+}
+
+.btn:hover{
+    background-color: #F40000;
+}
+
+.title{
+    color: #F40000;
+    font-size: 20px;
+}
+
+.logo{
+    i{
+        color: #F40000;  
+    }
+}
+
+#formAddVenta{
+    li>a, .dropdown-content li>span{
+        color: black !important;
+    }
+}
+
+.autocomplete-content li .highlight {
+    color: #F40000 !important;
+}
+
+.spinner-red-only {
+    border-color: #F40000 !important;
+}
+
+.spinner-green-only{
+    border-color: #F40000 !important; 
+}
+
+/* label focus color */
+.input-field input:focus + label {
+    color: #F40000 !important;
+  }
+  /* label underline focus color */
+  .row .input-field input:focus {
+    border-bottom: 1px solid #F40000 !important;
+    box-shadow: 0 1px 0 0 #F40000 !important
+  }
+
+  /* label focus color */
+  textarea:focus + label {
+    color: #F40000 !important;
+  }
+  /* label underline focus color */
+  textarea:focus {
+    border-bottom: 1px solid #F40000 !important;
+    box-shadow: 0 1px 0 0 #F40000 !important
+  }
+
+.login {
+    $self: &;
+
+    #{ $self }__hero {
+        .card{
+            margin-top: 40%;
+            background-color: white;
+        }
+        .login-pad{
+            padding: 0 30%;
+            @media #{$medium-and-down} {
+                padding: 0;
+            }
+        }
+
+        .sac-login{
+            width: 150;
+            height: 100px;
+        }
+
+        .footer-side{
+            text-align: center;
+            p{
+                margin-top: 0;
+                margin-bottom: 0;
+                font-size: .75rem;
+            }
+        }
+
+        p{
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .cta{
+            text-align: center;
+            margin-bottom: 30px;
+            input{
+                color: white;
+            }
+        }
+        .error{
+            border-bottom: 1px solid red;
+        }
+    }
+}

@@ -1,0 +1,203 @@
+/** BOX-SIZING **/
+
+@mixin box-sizing($property) {
+    -webkit-box-sizing: $property;
+    box-sizing: $property;
+    -moz-box-sizing: $property
+}
+
+
+/** WEBSITE FONT SIZE **/
+
+@mixin website_font_size($tag) {
+    @if $tag==H1 {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 800 !important;
+        font-size: 31px;
+        line-height: 2.125em;
+        @media #{$small-and-down} {
+            font-size: 27px;
+            line-height: 1.875em;
+        }
+    }
+    @else if $tag==H2 {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700 !important;
+        font-size: 25px;
+        line-height: 1.875em;
+        @media #{$small-and-down} {
+            font-size: 23px;
+            line-height: 1.5625em;
+        }
+    }
+    @else if $tag==P1 {
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        line-height: 1.5em;
+    }
+}
+
+//Button Base
+@mixin button_base() {
+    display: inline-block;
+    position: static;
+    left: 0px;
+    top: 190px;
+    background-color: #4a148c;
+    border: none;
+    border-radius: 10px;
+    margin: 24px 0px;
+    text-transform: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700 !important;
+    font-size: 15px;
+    line-height: 19px;
+}
+
+//Button Base Size
+@mixin button_size($size) {
+    @if $size==large {
+        height: 40px;
+        padding: 10px 24px;
+    }
+    @else if $size==medium {
+        height: 32px;
+        padding: 6px 24px;
+    }
+    @else if $size==small {
+        height: 22px;
+        padding: 1px 24px;
+    }
+}
+
+//Button Base Color
+@mixin button_color($color) {
+    @if $color==primary {
+        border: 2px solid #4a148c;
+        background-color: #4a148c;
+        color: #FFF;
+        @include button_states(primary);
+    }
+    @else if $color==primary_outlined {
+        border: 2px solid #4a148c;
+        background-color: #FFFFFF;
+        color: #4a148c;
+        @include button_states(primary);
+    }
+    @else if $color==secondary {
+        border: 2px solid #f3e5f5;
+        background-color: #f3e5f5;
+        color: #FFF;
+        @include button_states(secondary);
+    }
+}
+
+//Button Base States
+@mixin button_states($type) {
+    @if $type==primary {
+        &:hover {
+            border: 2px solid #6a1b9a;
+            background-color: #6a1b9a;
+            color: #FFF;
+        }
+        &:active {
+            border: 2px solid #6a1b9a;
+            background-color: #6a1b9a;
+            color: #FFF;
+        }
+        &:disabled {
+            border: 2px solid #ECECEC;
+            background-color: #ECECEC;
+            color: #DAD9D9;
+        }
+    }
+    @else if $type==secondary {
+        &:hover {
+            border: 2px solid #f3e5f5;
+            background-color: #f3e5f5;
+            color: #FFF;
+        }
+        &:active {
+            border: 2px solid #f3e5f5;
+            background-color: #f3e5f5;
+            color: #FFF;
+        }
+        &:disabled {
+            border: 2px solid #ECECEC;
+            background-color: #ECECEC;
+            color: #DAD9D9;
+        }
+    }
+}
+
+//Primary Button
+@mixin btn($type) {
+    @if $type==primary_large {
+        @include button_base();
+        @include button_color(primary);
+        @include button_size(large);
+    }
+    @else if $type==primary_medium {
+        @include button_base();
+        @include button_color(primary);
+        @include button_size(medium);
+    }
+    @else if $type==primary_small {
+        @include button_base();
+        @include button_size(small);
+        @include button_color(primary);
+    }
+    @else if $type==primary_outlined_large {
+        @include button_base();
+        @include button_color(primary_outlined);
+        @include button_size(large);
+    }
+    @else if $type==primary_outlined_medium {
+        @include button_base();
+        @include button_color(primary_outlined);
+        @include button_size(medium);
+    }
+    @else if $type==primary_outlined_small {
+        @include button_base();
+        @include button_color(primary_outlined);
+        @include button_size(small);
+    }
+    @else if $type==secondary_large {
+        @include button_base();
+        @include button_color(secondary);
+        @include button_size(large);
+    }
+    @else if $type==secondary_medium {
+        @include button_base();
+        @include button_color(secondary);
+        @include button_size(medium);
+    }
+    @else if $type==secondary_small {
+        @include button_base();
+        @include button_color(secondary);
+        @include button_size(small);
+    }
+    @else if $type==link {
+        display: inline-block;
+        position: static;
+        height: 24px;
+        left: 0px;
+        top: 0px;
+        font-family: 'Avenir LT Std 95 Black', sans-serif;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 17px;
+        line-height: 23px;
+        letter-spacing: 0.00800049em;
+        color: #1B98E0;
+        margin: 24px 0px;
+        background-color: transparent;
+        border: none;
+        text-transform: none;
+        cursor: pointer;
+        &:hover {
+            text-decoration: underline;
+            color: #006256;
+        }
+    }
+}

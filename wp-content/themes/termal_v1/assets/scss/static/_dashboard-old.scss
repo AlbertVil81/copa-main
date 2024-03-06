@@ -1,0 +1,218 @@
+/* DASHBOARD */
+
+.dashboard {
+    $self: &;
+    background-color: #F3F4F6;
+
+    .loader_portal{
+        display: none;
+    }
+
+    .datos{
+        font-size: 20px;
+        font-weight: bold;
+        color: #F40000 !important;
+    }
+
+    .tab{
+        .active{
+
+        }
+    }
+
+    .duo{
+        @media #{$medium-and-down} {
+            text-align: center;
+        } 
+    }
+    
+    #{ $self }__hero {
+
+        margin-bottom: 0;
+
+        .p-right{
+            padding-right: 20px;
+            @media #{$medium-and-down} {
+                padding-right: 12px;
+            }
+        }
+
+        .footer-side{
+            text-align: center;
+            margin-left: 25px;
+            position:absolute;
+            bottom:5px;
+            right:10px;
+
+            p{
+                font-size: .75rem;
+            }
+        }
+
+        .card-header{
+            padding: 10px;
+            background-color: #DFE6ED;
+        }
+
+        .card-p10{
+            padding: 10px;
+        }
+        
+        .menu{
+            //padding: 30px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            height:20vh;
+            box-shadow: none;
+            border-radius: .25rem;
+            box-shadow: 0px 10px 50px -5px rgba(0,0,0,0.1);        
+        }
+
+        .rapido{
+            //padding: 30px;
+            background-color: white;
+
+            box-shadow: none;
+            border-radius: .25rem;
+            padding: 20px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+            transition: box-shadow 0.3s ease-in-out;      
+            i{
+                vertical-align: middle;
+            }
+            p{
+                color: black;
+            }
+        }
+
+        .rapido:hover {
+            box-shadow: 0 1px 5px #F40000;
+            /*
+            background-color: #F40000;
+            color: white !important;
+            p{
+                color: white !important;
+            }
+            span{
+                color: white !important;
+            }
+            */
+        }
+
+        .company_logo #avatar_file, .company_logo #logo_file { visibility: hidden; display: none; }
+
+        .card{
+            box-shadow: none;
+        }
+
+        .chip{
+            background-color: #F40000;
+            color: white;
+        }
+
+        .stickyfix{
+            position: sticky;
+            top: 20px;
+
+            @media #{$medium-and-down} {
+                position: relative;
+                top: 0px;
+            }
+        }
+
+        .cumple{
+            padding: 10px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            box-shadow: none;
+            border-radius: .25rem;
+            box-shadow: 0px 10px 50px -5px rgba(0,0,0,0.1);
+
+            p{
+                margin-top: 7px;
+            }
+        }
+
+        .flexing{
+            display: flex;
+        }
+
+        .ml{
+            margin-left: auto;
+        }
+
+        .menu-left{
+            padding: 30px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            margin-left: -15px;
+            margin-bottom: 0;
+            margin-top: 0;
+            height:100vh;
+            @media #{$medium-and-down} {
+                height:auto;
+                margin-left: 0px;
+            }
+        }
+
+        .menu-header{
+            text-align: center;
+        }
+
+        .circle{
+            width: 80px;
+            height: 80px;
+        }
+
+        a{
+            color: black;
+        }
+
+        a:hover {
+            color: #F40000;
+        }
+
+        .centered{
+            text-align: center;
+        }
+
+        .numero{
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        p{
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .selected{
+            font-weight: bold;
+            color: #F40000;
+
+        }
+
+        .va{
+            vertical-align: middle;
+        }
+
+        .font9{
+            font-size: 9px;
+        }
+
+        .links{
+            a{
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+
+            a:hover {
+                color: #F40000;
+            }
+        }
+    }
+}

@@ -1,0 +1,167 @@
+.dashboard {
+    $self: &;
+
+    #{ $self }__hero {
+
+        .card{
+            border-radius: 18px !important;
+        }
+
+        .centered{
+            text-align: center;
+        }
+
+        .righted{
+            text-align: right;
+        }
+
+        .lefted{
+            text-align: left;
+        }
+
+        .jugador{
+            width: 100px;
+            height: 100px;
+        }
+
+        .tabs .tab a.active, .tabs .tab a:hover {
+            background-color: transparent;
+            color: #BB007A !important;
+        }
+
+        .tabs .tab a {
+            color: #BB007A !important;
+        }
+
+        .tabs .indicator {
+            background-color:#BB007A;
+        } /*Color of underline*/
+
+        .back{
+            background-color: white !important;
+        }
+        .clients{
+            background-color: #F6F6F6;
+            margin-bottom: 0px;
+            
+            .row {
+                margin-bottom: 0px;
+            }
+            
+            h4 {
+                line-height: 20px; // override website_font_size
+                color: #A1A0A0;
+                margin: 47px 0px;
+                
+                @media #{$medium-and-down} {
+                    text-align: center;	
+                    margin: 15px 20px;
+                }
+            }
+            
+            .logos {
+                margin: 43px 0px;
+                text-align: center;
+                
+                .item {
+                    display: inline;
+                    margin-right: 4%;
+                    
+                    &:last-child { 
+                        margin-right: 0px;	
+                    }
+                    
+                    img {
+                        height: 100px;
+                        
+                        @media #{$small-and-down} {
+                            height: 80px;	
+                        }
+                    }
+                    
+                    @media #{$small-and-down} {
+                        margin-right: 30px;	
+                    }
+                    
+                    &:nth-child(3) {
+                        @media #{$medium-and-down} {
+                            margin-right: 0px;	
+                            
+                            &:after { 
+                                 content: "\A";
+                                 white-space: pre;
+                            }
+                        }
+                    }
+                    
+                    &:nth-child(4), 
+                    &:nth-child(5) {
+                        @media #{$medium-and-down} {
+                            display: inline-block;
+                            margin-top: 20px;
+                            margin-bottom: 20px;
+                        }
+                    }
+                }
+                
+                @media #{$medium-and-down} {
+                    margin: 0px;
+                }
+            }
+        }
+
+        .partners{
+		
+            .row {
+                margin-bottom: 0px;
+            }
+    
+            @media #{$medium-and-down} {
+            }
+            
+            .caption {
+                text-align: center;
+                
+                h2{
+                    line-height: 25px;
+                    margin-top: 40px;
+                    margin-bottom: 8px;
+        
+                    @media #{$medium-and-down} {
+                        line-height: 25px;
+                    }
+                }
+        
+                .b1{
+                    @include website_font_size(B1);
+                    color: #696868;
+                    
+                    @media #{$medium-and-down} {
+                        line-height: 24px;
+                    }
+                }
+        
+                mark{
+                    background-color: transparent;
+                    color: #CC0000;
+                }			
+            }
+            
+            .logos {
+                .col {
+                    height: 100px;
+                    margin: 30px 0px;
+                    text-align: center;
+                    
+                    @media #{$medium-and-down} {
+                        margin: 18px 0px;
+                    }
+                    
+                    img {
+                        height: 100px !important;
+                    }
+                }
+            }
+        }
+    }
+}

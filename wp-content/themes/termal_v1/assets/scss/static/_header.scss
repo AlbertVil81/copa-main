@@ -1,0 +1,36 @@
+/* HEADER */
+.header {
+    $self: &;
+    
+    .negro{
+        color: black;
+    }
+
+    .links{
+        a{
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    .sidenav-trigger{
+        float: right !important;
+    }
+
+    .grey-sac{
+        background-color: #F40000;
+    }
+
+    .sac-logo{
+        margin-left: 25px;
+    }
+
+    .selected{
+        font-weight: bold;
+    }
+
+    .va{
+        vertical-align: middle;
+    }
+   
+}

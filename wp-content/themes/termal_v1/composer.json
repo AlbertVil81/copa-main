@@ -1,0 +1,8 @@
+{
+    "require": {
+        "phpmailer/phpmailer": "^6.6",
+        "setasign/fpdf": "^1.8",
+        "picqer/php-barcode-generator": "^2.4",
+        "sarabitcom/fpdf-barcode": "^1.0"
+    }
+}
